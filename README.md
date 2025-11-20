@@ -1,0 +1,1 @@
+The Gains Alchemist adalah asisten kebugaran cerdas. Berbeda dengan tracker biasa, aplikasi ini menggunakan Regresi Linear untuk memprediksi kekuatan masa depan, menghitung One Rep Max (1RM), dan memberikan sistem ranking (Ego Rank) berdasarkan rasio berat badan pengguna.
