@@ -3,7 +3,7 @@
 > **Personal Strength Predictor & Workout Analytics powered by Machine Learning.**
 > *Built for the disciplined, engineered for progress.*
 
-![Dashboard Preview](https://github.com/kayyz7/gains-alchemist-ai/blob/main/screenshot_dashboard.png?raw=true)
+![Dashboard Preview](https://github.com/rifki-ardhika-putra7/gains-alchemist/blob/main/GAINS%20AI.png)
 
 ## 🚀 Overview
 **The Gains Alchemist** adalah aplikasi *Full-Stack Data Science* yang dirancang untuk membantu atlet dan pegiat kebugaran melacak progres kekuatan mereka secara ilmiah.
