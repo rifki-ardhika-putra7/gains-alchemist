@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gains Alchemist</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="sidebar">
+            <h1 class="title">⚡ GAINS AI</h1>
+            <p class="subtitle">Personal Strength Predictor</p>
+
+            <div class="upload-section">
+                <label for="csvFile" class="btn-upload">📂 UPLOAD DATA (CSV)</label>
+                <input type="file" id="csvFile" accept=".csv" style="display: none;" onchange="uploadData()">
+                <p id="uploadStatus" style="font-size: 0.7rem; color: gray; margin-top: 5px; text-align: center;">
+                    *Format Lyfta</p>
+            </div>
+
+            <div class="setting-section" style="margin-top: 10px; border-top: 1px solid #30363d; padding-top: 10px;">
+                <label style="font-size: 0.8rem; color: #8b949e;">BERAT BADAN (KG):</label>
+                <div class="row-input">
+                    <input type="number" id="bodyWeight" class="cyber-input" style="margin-bottom:0;">
+                    <button onclick="saveWeight()" class="btn-small">SAVE</button>
+                </div>
+            </div>
+
+            <hr style="border-color: #30363d; margin: 15px 0;">
+
+            <div class="control-group">
+                <label>Pilih Latihan:</label>
+                <select id="exerciseSelector" class="cyber-input">
+                    <option>Loading...</option>
+                </select>
+            </div>
+
+            <div class="stats-card">
+                <h3>PR SAAT INI</h3>
+                <h2 id="currentPr" class="glow">- kg</h2>
+            </div>
+
+            <div class="stats-card future">
+                <h3>TARGET MINGGU DEPAN</h3>
+                <h2 id="targetPr" class="glow-green">- kg</h2>
+                <div class="rec-box">
+                    <p>Strength (5 reps): <span id="recHeavy" class="white-bold">-</span> kg</p>
+                    <p>Hyper (10 reps): <span id="recHyper" class="white-bold">-</span> kg</p>
+                </div>
+            </div>
+
+            <div class="stats-card rank-card">
+                <h3>CURRENT RANK</h3>
+                <h2 id="userRank" class="glow-purple">-</h2>
+            </div>
+
+            <div class="input-section">
+                <h3>📝 CATAT LATIHAN</h3>
+                <input type="date" id="inputDate" class="cyber-input">
+                <select id="inputExercise" class="cyber-input">
+                    <option>Pilih...</option>
+                </select>
+                <div class="row-input">
+                    <input type="number" id="inputWeight" placeholder="Beban (kg)" class="cyber-input">
+                    <input type="number" id="inputReps" placeholder="Reps" class="cyber-input">
+                </div>
+                <button onclick="submitData()" class="btn-submit">SIMPAN DATA 🚀</button>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="chart-wrapper big-chart">
+                <canvas id="gainsChart"></canvas>
+            </div>
+            <div class="chart-row">
+                <div class="chart-wrapper small-chart">
+                    <h3 class="chart-title">DISTRIBUSI VOLUME OTOT</h3>
+                    <canvas id="anatomyChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
